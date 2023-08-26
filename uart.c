@@ -1,7 +1,7 @@
 #include <avr/io.h>
 #include <stdio.h>
 
-#include <util/setbaud.h>
+#include <util/setbaud.h> 
 
 void uart_init(void) 
 {
@@ -11,7 +11,7 @@ void uart_init(void)
 #if USE_2X
     UCSR0A |= _BV(U2X0);
 #else
-    UCSR0A &= ~(_BV(U2X0));
+    UCSR0A &= ~(_BV(U2X0)); 
 #endif
 
     UCSR0C = _BV(UCSZ01) | _BV(UCSZ00); /* 8-bit data */ 

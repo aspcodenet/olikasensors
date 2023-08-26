@@ -32,7 +32,7 @@ uint16_t analogRead(uint8_t apin) {
 				ADMUX |= (_BV(MUX2) | _BV(MUX0));;
 				break;
 	}
-
+ 
 	ADCSRA |= _BV(ADSC);                     /* start ADC conversion */
 	loop_until_bit_is_clear(ADCSRA, ADSC);          /* wait until done */
 	return(ADC);                            /* Return with value read */
