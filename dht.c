@@ -80,11 +80,7 @@ void resetDHT(){
 
 void beginSendRequest() {
 
-	DHT_DDR |= (1 << DHT_INPUTPIN); //output
-	DHT_PORT |= (1 << DHT_INPUTPIN); //high
-	_delay_ms(100);
-
-	DHT_PORT &= ~(1 << DHT_INPUTPIN); //low
-	DHT_DDR |= (1 << DHT_INPUTPIN); //output
+	BIT_SET(DHT_DDR, DHT_INPUTPIN); //output
+	BIT_CLEAR(DHT_PORT, DHT_INPUTPIN); //low
 	_delay_us(1200);
 }
