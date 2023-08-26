@@ -9,7 +9,7 @@
 #include "dht.h"
 
 
-// https://www.waveshare.com/wiki/DHT22_Temperature-Humidity_Sensor
+// https://controllerstech.com/temperature-measurement-using-dht22-in-stm32/
 /* https://wokwi.com/projects/374031193915817985
 */
 
