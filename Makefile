@@ -11,7 +11,7 @@ LDFLAGS=-mmcu=$(MCU)
 PORT=\\\\.\\COM3
 BIN=olikasensors
 OUT=${BIN}.hex 
-SOURCES = main.c uart.c analogRead.c
+SOURCES = main.c uart.c analogRead.c ultrasonic_trigger_echo.c comdef.c
 
 DEBUG?=1
 
