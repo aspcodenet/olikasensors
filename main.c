@@ -85,12 +85,17 @@ int main(){
 		uint16_t value = analogRead(PINNE_A0); // 0 - 1023
 		float celsius = 1 / (log(1 / (1023. / value - 1)) / BETA + 1.0 / 298.15) - 273.15;
 
-//The AVR port does not link any float support by default (BTW many ARM implementations also) because of the size of the functions. Remember that float math support + printf floats may take up to 15k of your 32k program memory!!
-		//printf("%f\n",celsius);
+//The AVR port does not link any float support by default 
+//(BTW many ARM implementations also) because of the size of the functions.
+// Remember that float math support + printf floats may take up to 15k of your 32k 
+//program memory!!
+//		printf("%f\n",celsius);
 
 
 		char txt[30];
 		printf("%s\n", ftos(txt,3,2,celsius));
+    //
+    // printf("%.2f\n", celsius);
 		_delay_ms(1000);
 	}
 	return 0;
