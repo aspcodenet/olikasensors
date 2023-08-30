@@ -96,7 +96,7 @@ int main(){
 		char txt[30];
 		printf("%s\n", ftos(txt,3,2,celsius));
     //
-    // printf("%.2f\n", celsius);
+    printf("%.c\n", "H");
 		_delay_ms(1000);
 	}
 	return 0;
